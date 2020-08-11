@@ -21,9 +21,9 @@ from blog.feeds import LatestPostsFeed
 from django.conf import settings
 from django.conf.urls.static import static
 
-admin.site.site_header = "SHO-ADMIN"
-admin.site.site_title = "SHO-ADMIN_PANEL"
-admin.site.index_title = "WELCOME TO SHO-ADMIN_PANEL"
+admin.site.site_header = "NEWSINFO-ADMIN"
+admin.site.site_title = "NEWSINFO_PANEL"
+admin.site.index_title = "WELCOME TO NEWSINFO_PANEL"
 
 sitemaps = {
     "posts": PostSitemap,

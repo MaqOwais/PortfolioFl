@@ -21,8 +21,44 @@
   <!-- for summernote  -->
   <script>
     $(document).ready(function () {
+        // This will fire when document is ready:
+        $(window).resize(function () {
+            // This will fire each time the window is resized:
+            if ($(window).width() >= 500) {
+                // if larger or equal
+                $('#ab').show();
+                $('#ab1').hide();
+                $('#ab2').hide();
+                
+                
+            } else {
+               
+                $('#ab').hide();
+                $('#ab1').show();
+                $('#ab2').show();
+            }
+        }).resize(); // This will simulate a resize to trigger the initial run.
+    });
+  </script>
+  <script>
+    $(document).ready(function () {
+      $(".nav-link-activea").css("font-weight", "600");
+      $(".nav-link-a").css("font-weight", "400");
+    });
+    $(document).ready(function () {
+      $(".nav-link-activea").css("font-size", "24px");
+      $(".nav-link-a").css("font-size", "19px");
+    });
+    // $(document).ready(function () {
+    //   $(".nav-link-activea").css("background-color", "white");
+    //   $(".nav-link-activea").css("color", "rgb(157, 94, 189)");
+      
+    // });
+  </script>
+  <script>
+    $(document).ready(function () {
       // $("span").addClass("summer");
-      $("#main-ow").css("color", "green");
+      $("#main-ow").css("color", "rgb(157, 94, 189)");
 
       $("span").children("span").css({ "max-width": "100%" });
       $("span").children("a").css({ "word-break": "break-all" });
@@ -85,105 +121,107 @@
 
 <body>
 
-  <div>
-    <nav
-      style="background-color: rgb(142, 218, 129) ; margin-right: 0px;  position: center; align-content: space-around; overflow: auto; ">
+  <div style="padding-bottom: 4px;">
+    <div
+      style="box-shadow: 5px 5px 5px rgb(225, 182, 246); background-color: rgb(157, 94, 189) ; margin-right: 0px;  position: center; align-content: space-around; overflow: auto; ">
       <div style="padding: 0px; padding-right: 0px; height: 88px; margin-right: 0rem;  ">
         <div class="container"
-          style=" display: flex; flex-wrap: nowrap; justify-content: flex-start; align-items: center;" id="abc1">
-          <img src="/static/sho.png"
-            style="display: block; margin: 0px; border: 0px; padding : 0px; width: 85px; padding-right: 4px; padding-top: 3px; border-radius: 7px;"
-            id="imgg" alt="sho">
+          style=" padding-left: 0px; padding-right: 0px; display: flex; flex-wrap: nowrap; justify-content: flex-start; align-items: center; " id="abc1">
+          <!-- <img src="/static/fl.png"
+            style=" width: 70%; display: block; margin: 0px; border: 0px; padding : 0px; width: 85px; padding-right: 4px; padding-top: 3px; border-radius: 7px;"
+            id="imgg" alt="sho">  -->
           <a class="navbar-brand" style="padding: 0px; margin: 0px; padding-left: 10px;" href="/">
-            <h1 style="color: green; margin-bottom :0px; padding: 0px; max-width: 80%;">SUNNI HANFI ORGANIZATION</h1>
+            <h1 style="color: whitesmoke; margin-bottom :0px; padding-top: 14px; max-width: 80%;"> <span style="box-shadow: 5px 5px 5px rgb(225, 182, 246); border-radius:6px">NewsInfo</span></h1>
           </a>
 
         </div>
       </div>
-    </nav>
+    </div> 
   </div>
   
-  <nav class="navbar navbar-dark navbar-expand-lg " style="background-color: rgb(7, 107, 12); padding-bottom : 10px;"
+  <nav class="navbar navbar-dark navbar-expand-lg " style=" box-shadow: 6px 6px 6px rgb(225, 182, 246); background-color: #609; padding-bottom : 10px;"
     id="abc2">
     </button>
 
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar navbar-dark navbar-nav mr-auto">
-        <li class="nav-item ">
-          <a class="nav-link {{ home_page }}" style="
+        <li class="nav-item" style="padding: 7px;">
+          <a class="nav-link-{{home_page}}a" style="
                   /* (80px - line-height of 27px) / 2 = 26.5px */
                   padding-top: 10px;
                   padding-bottom: 0px;
-                  line-height: 20px;
-                  color: rgb(142, 218, 129);
-                " href="/">Home <span class="sr-only">(current)</span></a>
+                  line-height: 15px;
+                  color: snow;
+                " href="/">Home</a>
         </li>
 
 
-        <li class="nav-item {{ blog_page}}">
-          <a class="nav-link" style="
+        <li class="nav-item" style="padding: 7px;">
+          <a class="nav-link-{{blog_page}}a" style="
                   /* (80px - line-height of 27px) / 2 = 26.5px */
                   padding-top: 10px;
                   padding-bottom: 0px;
-                  line-height: 20px;
-                  color: rgb(142, 218, 129);
-                " href="/blog">Blog</a>
+                  line-height: 15px;
+                  color: snow;
+                " href="/blog">NewsBlogs</a>
         </li>
-        <li class="nav-item {{ archive_page}}">
-          <a class="nav-link" style="
+        <li class="nav-item" style="padding: 7px;">
+          <a class="nav-link-{{archive_page}}a" style="
                   /* (80px - line-height of 27px) / 2 = 26.5px */
                   padding-top: 10px;
                   padding-bottom: 0px;
-                  line-height: 20px;
-                  color: rgb(142, 218, 129);
+                  line-height: 15px;
+                  color: snow;
                 " href="/archive">Archive</a>
         </li>
-        <li class="nav-item ">
+        <!-- <li class="nav-item " style="padding: 7px;">
           <a class="nav-link" style="
-                    /* (80px - line-height of 27px) / 2 = 26.5px */
-                    padding-top: 10px;
-                    padding-bottom: 0px;
-                    line-height: 20px;
-                    color: rgb(142, 218, 129);
+                    line-height: 15px;
+                    color: snow;
                   " href="/maqoAdmin786">ADMIN</a>
-        </li>
-
-
-        <li class="nav-item {{ about_page }}">
-          <a class="nav-link" style="
+        </li> -->
+        <li class="nav-item" style="padding: 7px;">
+          <a class="nav-link-{{books_page}}a" style="
                   /* (80px - line-height of 27px) / 2 = 26.5px */
                   padding-top: 10px;
                   padding-bottom: 0px;
-                  line-height: 20px;
-                  color: rgb(142, 218, 129);
+                  line-height: 15px;
+                  color: snow;
+                " href="/books">Magazine Corner</a>
+        </li>
+
+        <li class="nav-item" style="padding: 7px;">
+          <a class="nav-link-{{ about_page }}a" style="
+                  /* (80px - line-height of 27px) / 2 = 26.5px */
+                  padding-top: 10px;
+                  padding-bottom: 0px;
+                  line-height: 15px;
+                  color: snow;
                 " href="/about">About</a>
         </li>
-        <li class="nav-item dropdown">
+        <li class="nav-item dropdown" style="padding: 7px;">
           <a class="nav-link dropdown-toggle" style="
-                  /* (80px - line-height of 27px) / 2 = 26.5px */
-                  padding-top: 10px;
-                  padding-bottom: 0px;
-                  line-height: 20px;
-                  color: rgb(142, 218, 129);
+                  line-height: 15px;
+                  color:snow;
                 " href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
             aria-expanded="false">
             <!--WELCOME {% if user.is_authenticated %} {{request.user}}  {% endif %}-->
             JOIN US
           </a>
-          <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="background-color: rgb(142, 218, 129)">
+          <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="background-color:snow">
             {% if not user.is_authenticated %}
             <a class="dropdown-item" data-toggle="modal" data-target="#signUPModal"
-              style="color: green; width:70%;">SignUP</a>
+              style="color: #609; width:70%;">SignUP</a>
             {% endif %}
             {% if not user.is_authenticated %}
             <a class="dropdown-item" data-toggle="modal" data-target="#loginModal"
-              style="color: green; width:70%;">LogIN</a>
+              style="color: #609; width:70%;">LogIN</a>
             {% endif %}
             {% if user.is_authenticated %}
             <a class="dropdown-item" data-toggle="modal" data-target="#logoutModal"
-              style="color: green; width:70%;">LogOUT</a>
+              style="color: #609; width:70%;">LogOUT</a>
             {% endif %}
-            <a class="dropdown-item" href="/contact" style="color: green; width:70%;">Contact US</a>
+            <a class="dropdown-item" href="/contact" style="color: #609; width:70%;">Contact US</a>
 
           </div>
         </li>
@@ -192,9 +230,9 @@
 
       </ul>
       <div>
-        <a style="color: rgb(199, 243, 199); padding-left: 10px;" href="https://www.facebook.com/SunniHanfiOrganisationMumbai/"><i class="fab fa-facebook-square"></i></a>
-        <a style="color: rgb(199, 243, 199);; padding-left: 10px;" href="mailto: imran.shaikh16230@gmail.com" title="email"><i class="fas fa-envelope"></i></a>
-        <a style="color: rgb(199, 243, 199); padding-left: 10px;" href="https://www.youtube.com/user/786SHO/videos" title="youtube"><i class="fa fa-youtube-play" aria-hidden="true"></i>
+        <a style="color: snow; padding-left: 10px;" href="https://www.facebook.com/SunniHanfiOrganisationMumbai/"><i class="fab fa-facebook-square"></i></a>
+        <a style="color: snow; padding-left: 10px;" href="mailto: imran.shaikh16230@gmail.com" title="email"><i class="fas fa-envelope"></i></a>
+        <a style="color: snow; padding-left: 10px;" href="https://www.youtube.com/user/786SHO/videos" title="youtube"><i class="fa fa-youtube-play" aria-hidden="true"></i>
         </a>
       </div>
 
@@ -203,17 +241,6 @@
 
   </nav>
 
-  <style>
-    #abc1 {
-
-      font-family: "Georgia";
-    }
-
-    #abc2 {
-
-      font-family: "Georgia";
-    }
-  </style>
 
 
 
@@ -232,7 +259,7 @@
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" id="signUPModal1" style="color: rgb(7, 107, 12);">SIGN UP </h5>
+          <h5 class="modal-title" id="signUPModal1" style="color: #609;">SIGN UP </h5>
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
@@ -240,34 +267,34 @@
         <div class="modal-body">
           <form action="/signup/" method="POST">
             <div class="form-group">
-              <label for="username" style="color: rgb(7, 107, 12);">Username</label>
-              <input type="text" style="color: rgb(7, 107, 12);" class="form-control" id="username" name="username"
+              <label for="username" style="color: #609;">Username</label>
+              <input type="text" style="color: #609;" class="form-control" id="username" name="username"
                 placeholder="Name" required>
             </div>
             <div class="form-group">
-              <label for="email1" style="color: rgb(7, 107, 12);">Email address</label>
+              <label for="email1" style="color: #609;">Email address</label>
               <input type="email" class="form-control" id="email1" name="email1" placeholder="name@example.com"
                 required>
             </div>
 
             <div class="form-group">
-              <label for="pass1" style="color: rgb(7, 107, 12);">Password</label>
+              <label for="pass1" style="color: #609;">Password</label>
               <input type="password" class="form-control" id="pass1" name="pass1" placeholder="Choose your Password"
                 required>
             </div>
             <div class="form-group">
-              <label for="pass2" style="color: green">Confirm Password</label>
+              <label for="pass2" style="color: #609">Confirm Password</label>
               <input type="password" class="form-control" id="pass2" name="pass2" placeholder="Confirm Password"
                 required>
             </div>
 
-            <button type="submit" class="btn btn-sm btn-success">Submit</button>
+            <button type="submit" class="btn btn-sm btn-outline-success">Submit</button>
             {% csrf_token %}
           </form>
         </div>
 
         <div>
-          <hr style="color: green;">
+          <hr style="color: #609;">
         </div>
         <div style="padding-left: 20px ; padding-bottom: 10px;">
           <div class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
@@ -279,12 +306,12 @@
   </div>
 
 
-  <div style="color: green;">
+  <div style="color: #609;">
     <div class="modal fade" id="loginModal" tabindex="-1" role="dialog" aria-labelledby="loginModal" aria-hidden="true">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
           <div class="modal-header">
-            <h5 class="modal-title" id="login" style="color: green;">Login : </h5>
+            <h5 class="modal-title" id="login" style="color: #609;">Login : </h5>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
@@ -293,18 +320,18 @@
             <form action="/login/" method="POST">
               {% csrf_token %}
               <div class="form-group">
-                <label for="loginusername" style="color: green;">Username</label>
+                <label for="loginusername" style="color: #609;">Username</label>
                 <input type="text" class="form-control" id="loginusername" name="loginusername" placeholder="Name"
                   required>
               </div>
 
               <div class="form-group">
-                <label for="loginpassword" style="color: green;">Password</label>
+                <label for="loginpassword" style="color: #609;">Password</label>
                 <input type="password" class="form-control" id="loginpassword" name="loginpassword"
                   placeholder="Enter your Password" required>
               </div>
 
-              <button type="submit" class="btn btn-sm btn-success">Submit</button>
+              <button type="submit" class="btn btn-sm btn-outline-success">Submit</button>
               <!-- {% csrf_token %} -->
             </form>
           </div>
@@ -317,8 +344,8 @@
     <div class="modal-dialog" role="document">
       <div class="modal-content">
         <div class="modal-header">
-          <h5 class="modal-title" style="color: green;" id="login">CONFIRM LOGOUT: </h5>
-          <button type="button" class="close" style="color: green" data-dismiss="modal" aria-label="Close">
+          <h5 class="modal-title" style="color: #609;" id="login">CONFIRM LOGOUT: </h5>
+          <button type="button" class="close" style="color: #609" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
@@ -326,7 +353,7 @@
           <form action="/logout/" method="POST">
             {% csrf_token %}
 
-            <button type="submit" class="btn btn-sm btn-success">LOGOUT</button>
+            <button type="submit" class="btn btn-sm btn-outline-success">LOGOUT</button>
           </form>
         </div>
 
@@ -345,11 +372,14 @@
         left: 0;
         bottom: 0;
         width: 100%;
-        background-color: rgb(7, 107, 12);
+        background-color: rgb(157, 94, 189);
         color: white;
         text-align: center;
         margin: 0px;
         height: 80px;
+        box-shadow: 4px 4px rgb(239, 207, 255), -4px -4px rgb(239, 207, 255), 0px 0px 5px 5px rgb(239, 207, 255);
+ 
+        z-index: 100;
       }
 
       .footer p {
@@ -382,9 +412,12 @@
 
     width: 97%;
   }
-
+  a {
+    text-decoration: none !important;
+  }
   * {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-style:oblique ;
   }
 </style>
 

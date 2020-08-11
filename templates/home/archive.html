@@ -10,118 +10,120 @@
 
   <div id="sidebar" style="height: auto !important;" itemscope="itemscope" itemtype="http://schema.org/WPSideBar"
     style="height: auto !important;">
-    <div class="slidebar ty-trigger section" id="slidebar" style="height: auto !important;">
+    <div class="slidebar ty-trigger section" id="slidebar" style="height: auto !important; box-shadow: 4px 4px 4px rgb(225, 182, 246);">
       <div class="widget LinkList" data-version="1" id="LinkList1">
         <h2 style="color: #556B2F; padding:5px;">
 
         </h2>
         <div class="widget-content">
-          <div id="srch1">
-            <form method="get" style="    margin-left: 0.5rem!important;" action="/search" class="form-inline my-2 my-lg-0 mx-3">
-            <input class="form-control mr-sm-1" type="search" placeholder="Search Article" aria-label="Search" name="query"
-                id="query" style="width:55%">
-            <button class="btn btn-outline-success my-2 mr-sm-1" type="submit">Search</button>
-            </form>
-        </div>
-
-          <ul style="color: green;">
-
-
-            <li><a href="/">
-                <p style=" color: green;">
-                  <p style=" color: green;">HOME</p>
-                </p>
-              </a></li>
-            <li><a href="/blog" style="color: green;">
-                <p>
-                  <p style=" color: green;">BLOGS</p>
-                </p>
-              </a></li>
-            <li><a href="/#topic" style="color: green;">
-                <p>
-                  <p style=" color: green;">TOPICS</p>
-                </p>
-              </a></li>
-            <li><a href="/archive" style="color: green;">
-                <p>
-                  <p style=" color: green;">ARCHIVE</p>
-                </p>
-              </a></li>
-            <li><a href="/about" style="color: green;">
-                <p>
-                  <p style=" color: green;">ABOUT</p>
-                </p>
-              </a></li>
-            <li><a href="/contact" style="color: green;">
-                <p>
-                  <p style=" color: green;">Contact US</p>
-                </p>
-              </a></li>
-            <li><a href="/books" style="color: green;">
-                <p>
-                  <p style=" color: green;">BOOKS CORNER</p>
-                </p>
-              </a></li>
-            {% if not user.is_authenticated %}
-            <li>
-              <a class="dropdown-item" data-toggle="modal" data-target="#signUPModal"
-                style="color: green; width:70%; padding: 0px; cursor: pointer;">
-                <p>
-                  <p style=" color: green;">SignUP</p>
-                </p>
-              </a>
-            </li>
-            {% endif %}
-            {% if not user.is_authenticated %}
-            <li>
-              <a class="dropdown-item" data-toggle="modal" data-target="#loginModal"
-                style="color: green; width:70%; padding: 0px; cursor: pointer;">
-                <p>
-                  <p style=" color: green;">LogIN</p>
-                </p>
-              </a>
-            </li>
-            {% endif %}
-            {% if user.is_authenticated %}
-            <li>
-              <a class="dropdown-item" data-toggle="modal" data-target="#logoutModal"
-                style="color: green; width:70%; padding: 0px; cursor: pointer;">
-                <p>
-                  <p style=" color: green;">LogOUT</p>
-                </p>
-              </a>
-            </li>
-            {% endif %}
-            <div>
-              <a style="color: green; padding-left: 10px; padding-right: 20px;"
-                href="https://www.facebook.com/SunniHanfiOrganisationMumbai/"><i
-                  class="fab fa-facebook-square fa-2x"></i></a>
-              <a style="color: green; padding-left: 10px; padding-right: 20px;"
-                href="mailto: imran.shaikh16230@gmail.com" title="email"><i class="fas fa-envelope fa-2x"></i></a>
-              <a style="color:green; padding-left: 10px;padding-right:20px;"
-                href="https://www.youtube.com/user/786SHO/videos" title="youtube"><i class="fa fa-youtube-play fa-2x"
-                  aria-hidden="true"></i>
-              </a>
+            <div id="srch1">
+                <form method="get" style="margin-left: 0.5rem!important;" action="/search" class="form-inline my-2 my-lg-0 mx-3">
+                <input class="form-control mr-sm-1" type="search" placeholder="Search Article" aria-label="Search" name="query"
+                    id="query" style="width:55%">
+                <button class="btn btn-outline-success my-2 mr-sm-1" type="submit">Search</button>
+                </form>
             </div>
 
+            <ul style="color: rgb(157, 94, 189);">
+
+
+                <li><a href="/">
+                        <p style=" color: rgb(157, 94, 189);">
+                            <p style=" color: rgb(157, 94, 189);">HOME</p>
+                        </p>
+                    </a></li>
+                <li><a href="/blog" style="color: rgb(157, 94, 189);">
+                        <p>
+                            <p style=" color: rgb(157, 94, 189);">BLOGS</p>
+                        </p>
+                    </a></li>
+                <li><a href="/#topic" style="color: rgb(157, 94, 189);">
+                        <p>
+                            <p style=" color: rgb(157, 94, 189);">TOPICS</p>
+                        </p>
+                    </a></li>
+                <li><a href="/archive" style="color: rgb(157, 94, 189);">
+                        <p>
+                            <p style=" color: rgb(157, 94, 189);">ARCHIVE</p>
+                        </p>
+                    </a></li>
+                <li><a href="/about" style="color: rgb(157, 94, 189);">
+                        <p>
+                            <p style=" color: rgb(157, 94, 189);">ABOUT</p>
+                        </p>
+                    </a></li>
+                <li><a href="/contact" style="color: rgb(157, 94, 189);">
+                        <p>
+                            <p style=" color: rgb(157, 94, 189);">Contact US</p>
+                        </p>
+                    </a></li>
+                <li><a href="/books" style="color: rgb(157, 94, 189);">
+                        <p>
+                            <p style=" color: rgb(157, 94, 189);">Magazine Corner</p>
+                        </p>
+                    </a></li>
+                {% if not user.is_authenticated %}
+                <li>
+                    <a class="dropdown-item" data-toggle="modal" data-target="#signUPModal"
+                        style="color: rgb(157, 94, 189); width:70%; padding: 0px; cursor: pointer;">
+                        <p>
+                            <p style=" color: rgb(157, 94, 189);">SignUP</p>
+                        </p>
+                    </a>
+                </li>
+                {% endif %}
+                {% if not user.is_authenticated %}
+                <li>
+                    <a class="dropdown-item" data-toggle="modal" data-target="#loginModal"
+                        style="color: rgb(157, 94, 189); width:70%; padding: 0px; cursor: pointer;">
+                        <p>
+                            <p style=" color: rgb(157, 94, 189);">LogIN</p>
+                        </p>
+                    </a>
+                </li>
+                {% endif %}
+                {% if user.is_authenticated %}
+                <li>
+                    <a class="dropdown-item" data-toggle="modal" data-target="#logoutModal"
+                        style="color: rgb(157, 94, 189); width:70%; padding: 0px; cursor: pointer;">
+                        <p>
+                            <p style=" color: rgb(157, 94, 189);">LogOUT</p>
+                        </p>
+                    </a>
+                </li>
+                {% endif %}
+                <div>
+                    <a style="color: rgb(157, 94, 189); padding-left: 10px; padding-right: 20px;"
+                        href="https://www.facebook.com/SunniHanfiOrganisationMumbai/"><i
+                            class="fab fa-facebook-square fa-2x"></i></a>
+                    <a style="color: rgb(157, 94, 189); padding-left: 10px; padding-right: 20px;"
+                        href="mailto: imran.shaikh16230@gmail.com" title="email"><i
+                            class="fas fa-envelope fa-2x"></i></a>
+                    <a style="color:rgb(157, 94, 189); padding-left: 10px;padding-right:20px;"
+                        href="https://www.youtube.com/user/786SHO/videos" title="youtube"><i
+                            class="fa fa-youtube-play fa-2x" aria-hidden="true"></i>
+                    </a>
+                </div>
 
 
 
 
-          </ul>
-          <div class="clear"></div>
-          <span class="widget-item-control">
-            <span class="item-control blog-admin">
 
+            </ul>
+            <div class="clear"></div>
+            <span class="widget-item-control">
+                <span class="item-control blog-admin">
+
+                </span>
             </span>
-          </span>
-          <div class="clear"></div>
+            <div class="clear"></div>
         </div>
 
-      </div>
 
     </div>
-    <div id="rollbar" class="col col-lg-2" style="margin-top: 15px; z-index: 1;">
+
+    </div>
+    <div id="rollbar" class="col col-lg-2" style="margin-top: 15px; z-index: 1; width: 90%;">
       <div class="container">
         <div class="actionon">
           <div id="spanMenu">
@@ -156,68 +158,68 @@
         </script>
 
         <style>
-          .actionon {
-            /* position: fixed; */
-            bottom: 50px;
-            left: 50px;
-            width: 50px;
-            height: 50px;
-            background: rgb(142, 218, 129);
-            color: #006400;
-            border-radius: 100%;
-            cursor: pointer;
-            font-family: cursive;
-            box-shadow: 0 10px 5px #006400;
-          }
+                    .actionon {
+                        /* position: fixed; */
+                        bottom: 50px;
+                        left: 50px;
+                        width: 50px;
+                        height: 50px;
+                        background: snow;
+                        color: #660099;
+                        border-radius: 100%;
+                        cursor: pointer;
+                        font-family: cursive;
+                        box-shadow: 0 10px 5px  rgb(225, 182, 246);
+                    }
 
-          .actionon span {
-            position: relative;
-            width: 100%;
-            height: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: #006400;
-            font-size: 1.2em;
-            transition: 0.3s ease-in-out;
-          }
+                    .actionon span {
+                        position: relative;
+                        width: 100%;
+                        height: 100%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        color: #660099;
+                        font-size: 1.2em;
+                        transition: 0.3s ease-in-out;
+                    }
 
-          .actionon:active span {
-            transform: rotate(75deg);
+                    .actionon:active span {
+                        transform: rotate(75deg);
 
-          }
+                    }
 
-          .actionoff {
-            /* position: fixed; */
-            bottom: 50px;
-            left: 50px;
-            width: 50px;
-            height: 50px;
-            background: rgb(142, 218, 129);
-            color: #006400;
-            border-radius: 100%;
-            cursor: pointer;
-            font-family: cursive;
-            box-shadow: 0 10px 5px #006400;
-          }
+                    .actionoff {
+                        /* position: fixed; */
+                        bottom: 50px;
+                        left: 50px;
+                        width: 50px;
+                        height: 50px;
+                        background: snow;
+                        color: #660099;
+                        border-radius: 100%;
+                        cursor: pointer;
+                        font-family: cursive;
+                        box-shadow: 0 10px 5px  rgb(225, 182, 246);
+                    }
 
-          .actionoff span {
-            position: relative;
-            width: 100%;
-            height: 100%;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            color: #006400;
-            font-size: 1.2em;
-            transition: 0.3s ease-in-out;
-          }
+                    .actionoff span {
+                        position: relative;
+                        width: 100%;
+                        height: 100%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        color: #660099;
+                        font-size: 1.2em;
+                        transition: 0.3s ease-in-out;
+                    }
 
-          .actionoff:active span {
-            transform: rotate(75deg);
+                    .actionoff:active span {
+                        transform: rotate(75deg);
 
-          }
-        </style>
+                    }
+                </style>
       </div>
     </div>
     <div id="srch" style="margin-top: 20px;">
@@ -232,13 +234,14 @@
   </div>
   <div class="container" style=" margin-bottom: 200px;" id="wrapper">
     <!-- <div class="col p-4 d-flex flex-column position-static"> -->
+      <h2 style="padding-top: 40px; padding-bottom: 40px; color: rgb(157, 94, 189);">  <span style="box-shadow: 3px 3px 3px rgb(225, 182, 246); ">ARCHIVE PAGE : </span></h2>
     <div class="timeline">
       <ul>
         {% for year, allmonth in dic.items %}
         <li>
           <div class="content121" id="content{{year}}" >
             {% for month in allmonth %}
-            <a style="color: green;" href="archive_page/{{year}}/{{month}}"><h3 id="{{month}}{{year}}">{{month}}</h3></a>
+            <a style="color: rgb(157, 94, 189);" href="archive_page/{{year}}/{{month}}"><h3 id="{{month}}{{year}}">{{month}}</h3></a>
             {% endfor %}
           </div>
           <div class="time121" id="time{{year}}">
@@ -752,7 +755,7 @@
       left: 50%;
       width: 3px;
       height: 100%;
-      background: rgb(193, 255, 182);
+      background: rgb(157, 94, 189);
     }
 
     .timeline ul {
@@ -793,9 +796,9 @@
       right: -7px;
       width: 10px;
       height: 10px;
-      background: green;
+      background: rgb(157, 94, 189);
       border-radius: 50%;
-      box-shadow: 0 0 0 5px rgba(91, 216, 107, 0.2);
+      box-shadow: 0 0 0 2px  rgb(204, 166, 223);
 
     }
 
@@ -806,9 +809,9 @@
       left: -3px;
       width: 10px;
       height: 10px;
-      background: green;
+      background: rgb(157, 94, 189);
       border-radius: 50%;
-      box-shadow: 0 0 0 5px rgba(91, 216, 107, 0.2);
+      box-shadow: 0 0 0 4px  rgb(204, 166, 223);
 
 
     }
@@ -817,7 +820,7 @@
       margin: 0;
       padding-bottom: 20px;
       font-weight: 550;
-      color: green;
+      color: rgb(157, 94, 189);
     }
 
     .timeline ul li p {
@@ -840,10 +843,10 @@
       right: -100px;
       margin: 0;
       padding: 8px 16px;
-      background-color: rgb(193, 255, 182);
-      color: green;
+      background-color: rgb(157, 94, 189);
+      color: snow;
       border-radius: 18px;
-      box-shadow: 0 0 0 3px rgba(91, 216, 107, 0.2);
+      box-shadow: 0 0 0 3px rgb(204, 166, 223);
 
     }
 
@@ -853,10 +856,10 @@
       left: -100px;
       margin: 0;
       padding: 8px 16px;
-      background-color: rgb(193, 255, 182);
-      color: green;
+      background-color: rgb(157, 94, 189);
+      color: snow;
       border-radius: 18px;
-      box-shadow: 0 0 0 3px rgba(91, 216, 107, 0.2);
+      box-shadow: 0 0 0 3px rgb(204, 166, 223);
 
     }
   </style>
@@ -1000,10 +1003,10 @@
 
     @media only screen and (min-width: 250px) {
       #LinkList1 {
-        border: 0.6px solid green;
-        border-radius: 3px;
-        background-color: rgb(193, 255, 182);
-      }
+            border: 0.6px solid rgb(157, 94, 189);
+            border-radius: 3px;
+            background-color: snow;
+        }
     }
 
     @media only screen and (min-width: 1005px) {
@@ -1062,140 +1065,6 @@
 
 
 </div>
-
-<style>
-  body {
-    margin: 0;
-    padding: 0;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  }
-
-  /* this is for whole timeline set of values i.e, body,line etc... */
-  .timeline {
-    position: relative;
-    margin: 50px auto;
-    /* auto for making it in middle and margin for above spacing*/
-    width: auto;
-    padding: 40px 0;
-    box-sizing: border-box;
-
-  }
-
-  /* this is for line */
-  .timeline:before {
-    content: '';
-    position: absolute;
-    left: 50%;
-    width: 3px;
-    height: 100%;
-    background: rgb(193, 255, 182);
-  }
-
-  .timeline ul {
-    margin: 0;
-    padding: 0;
-
-  }
-
-  .timeline ul li {
-    list-style: none;
-    position: relative;
-    width: 50%;
-    padding: 20px 40px;
-    box-sizing: border-box;
-  }
-
-  .timeline ul li:nth-child(odd) {
-    float: left;
-    text-align: right;
-    clear: both;
-  }
-
-  .timeline ul li:nth-child(even) {
-    float: right;
-    text-align: left;
-    clear: both;
-
-  }
-
-  .content121 {
-    padding-bottom: 20px;
-  }
-
-  .timeline ul li:nth-child(odd):before {
-    content: '';
-    position: absolute;
-    top: 24px;
-    right: -7px;
-    width: 10px;
-    height: 10px;
-    background: green;
-    border-radius: 50%;
-    box-shadow: 0 0 0 5px rgba(91, 216, 107, 0.2);
-
-  }
-
-  .timeline ul li:nth-child(even):before {
-    content: '';
-    position: absolute;
-    top: 24px;
-    left: -3px;
-    width: 10px;
-    height: 10px;
-    background: green;
-    border-radius: 50%;
-    box-shadow: 0 0 0 5px rgba(91, 216, 107, 0.2);
-
-
-  }
-
-  .timeline ul li h3 {
-    margin: 0;
-    padding-bottom: 20px;
-    font-weight: 550;
-    color: green;
-  }
-
-  .timeline ul li p {
-    margin: 10px 0 0;
-    padding: 0px;
-    padding-bottom: 20px;
-    /* font-weight: 550; */
-    color: black;
-  }
-
-  .timeline ul li .time121 h4 {
-    margin: 0px 0 0;
-    padding: 0px;
-    font-size: 20px;
-  }
-
-  .timeline ul li:nth-child(odd) .time121 {
-    position: absolute;
-    top: 12px;
-    right: -100px;
-    margin: 0;
-    padding: 8px 16px;
-    background-color: rgb(193, 255, 182);
-    color: green;
-    border-radius: 18px;
-    box-shadow: 0 0 0 3px rgba(91, 216, 107, 0.2);
-
-  }
-
-  .timeline ul li:nth-child(even) .time121 {
-    position: absolute;
-    top: 12px;
-    left: -100px;
-    margin: 0;
-    padding: 8px 16px;
-    background-color: rgb(193, 255, 182);
-    color: green;
-    border-radius: 18px;
-    box-shadow: 0 0 0 3px rgba(91, 216, 107, 0.2);
-
-  }
-</style>
 
 {% endblock body %}
 

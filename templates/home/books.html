@@ -6,117 +6,123 @@
 <div class="row" style="height: auto !important; margin-right: 10px; margin-left: 10px; margin-top: 10px;">
     <div id="sidebar1" style="height: auto !important;" itemscope="itemscope"
             itemtype="http://schema.org/WPSideBar" style="height: auto !important;">
-            <div class="slidebar ty-trigger section" id="slidebar" style="height: auto !important;">
+            <div class="slidebar ty-trigger section" id="slidebar" style="height: auto !important; box-shadow: 4px 4px 4px rgb(225, 182, 246);">
                 
-            <div class="widget LinkList" data-version="1" id="LinkList1">
-                <h2 style="color: #556B2F; padding:5px;">
-             
-                </h2>
-                <div class="widget-content">
-                    <div id="srch1">
-                        <form method="get" style="    margin-left: 0.5rem!important;" action="/search" class="form-inline my-2 my-lg-0 mx-3">
-                        <input class="form-control mr-sm-1" type="search" placeholder="Search Article" aria-label="Search" name="query"
-                            id="query" style="width:55%">
-                        <button class="btn btn-outline-success my-2 mr-sm-1" type="submit">Search</button>
-                        </form>
-                    </div>
-        
-                    <ul style="color: green;">
-        
-                    
-                        <li><a href="/">
-                                <p style=" color: green;">
-                                    <p style=" color: green;">HOME</p>
-                                </p>
-                            </a></li>
-                            <li><a href="/blog" style="color: green;">
-                                <p>
-                                    <p style=" color: green;">BLOGS</p>
-                                </p>
-                            </a></li>
-                            <li><a href="/#topic" style="color: green;">
-                                <p>
-                                    <p style=" color: green;">TOPICS</p>
-                                </p>
-                            </a></li>
-                            <li><a href="/archive" style="color: green;">
-                                <p>
-                                    <p style=" color: green;">ARCHIVE</p>
-                                </p>
-                            </a></li>
-                            <li><a href="/about" style="color: green;">
-                                <p>
-                                    <p style=" color: green;">ABOUT</p>
-                                </p>
-                            </a></li>
-                            <li><a href="/contact" style="color: green;">
-                                <p>
-                                    <p style=" color: green;">Contact US</p>
-                                </p>
-                            </a></li>
-                            <li><a href="/books" style="color: green;">
-                                <p>
-                                    <p style=" color: green;">BOOKS CORNER</p>
-                                </p>
-                            </a></li>
+                <div class="widget LinkList" data-version="1" id="LinkList1">
+                    <h2 style="color: #556B2F; padding:5px;">
+    
+                    </h2>
+                    <div class="widget-content">
+                        <div id="srch1">
+                            <form method="get" style="margin-left: 0.5rem!important;" action="/search" class="form-inline my-2 my-lg-0 mx-3">
+                            <input class="form-control mr-sm-1" type="search" placeholder="Search Article" aria-label="Search" name="query"
+                                id="query" style="width:55%">
+                            <button class="btn btn-outline-success my-2 mr-sm-1" type="submit">Search</button>
+                            </form>
+                        </div>
+    
+                        <ul style="color: rgb(157, 94, 189);">
+    
+    
+                            <li><a href="/">
+                                    <p style=" color: rgb(157, 94, 189);">
+                                        <p style=" color: rgb(157, 94, 189);">HOME</p>
+                                    </p>
+                                </a></li>
+                            <li><a href="/blog" style="color: rgb(157, 94, 189);">
+                                    <p>
+                                        <p style=" color: rgb(157, 94, 189);">BLOGS</p>
+                                    </p>
+                                </a></li>
+                            <li><a href="/#topic" style="color: rgb(157, 94, 189);">
+                                    <p>
+                                        <p style=" color: rgb(157, 94, 189);">TOPICS</p>
+                                    </p>
+                                </a></li>
+                            <li><a href="/archive" style="color: rgb(157, 94, 189);">
+                                    <p>
+                                        <p style=" color: rgb(157, 94, 189);">ARCHIVE</p>
+                                    </p>
+                                </a></li>
+                            <li><a href="/about" style="color: rgb(157, 94, 189);">
+                                    <p>
+                                        <p style=" color: rgb(157, 94, 189);">ABOUT</p>
+                                    </p>
+                                </a></li>
+                            <li><a href="/contact" style="color: rgb(157, 94, 189);">
+                                    <p>
+                                        <p style=" color: rgb(157, 94, 189);">Contact US</p>
+                                    </p>
+                                </a></li>
+                            <li><a href="/books" style="color: rgb(157, 94, 189);">
+                                    <p>
+                                        <p style=" color: rgb(157, 94, 189);">Magazine Corner</p>
+                                    </p>
+                                </a></li>
                             {% if not user.is_authenticated %}
                             <li>
-                                <a class="dropdown-item" data-toggle="modal" data-target="#signUPModal" style="color: green; width:70%; padding: 0px; cursor: pointer;">
-                                <p>
-                                    <p style=" color: green;">SignUP</p>
-                                </p>
-                            </a>
+                                <a class="dropdown-item" data-toggle="modal" data-target="#signUPModal"
+                                    style="color: rgb(157, 94, 189); width:70%; padding: 0px; cursor: pointer;">
+                                    <p>
+                                        <p style=" color: rgb(157, 94, 189);">SignUP</p>
+                                    </p>
+                                </a>
                             </li>
                             {% endif %}
                             {% if not user.is_authenticated %}
                             <li>
-                                <a class="dropdown-item" data-toggle="modal" data-target="#loginModal" style="color: green; width:70%; padding: 0px; cursor: pointer;">
-                                <p>
-                                    <p style=" color: green;">LogIN</p>
-                                </p>
-                            </a>
+                                <a class="dropdown-item" data-toggle="modal" data-target="#loginModal"
+                                    style="color: rgb(157, 94, 189); width:70%; padding: 0px; cursor: pointer;">
+                                    <p>
+                                        <p style=" color: rgb(157, 94, 189);">LogIN</p>
+                                    </p>
+                                </a>
                             </li>
                             {% endif %}
                             {% if user.is_authenticated %}
                             <li>
-                                <a class="dropdown-item" data-toggle="modal" data-target="#logoutModal" style="color: green; width:70%; padding: 0px; cursor: pointer;">
-                                <p>
-                                    <p style=" color: green;">LogOUT</p>
-                                </p>
-                            </a>
+                                <a class="dropdown-item" data-toggle="modal" data-target="#logoutModal"
+                                    style="color: rgb(157, 94, 189); width:70%; padding: 0px; cursor: pointer;">
+                                    <p>
+                                        <p style=" color: rgb(157, 94, 189);">LogOUT</p>
+                                    </p>
+                                </a>
                             </li>
                             {% endif %}
                             <div>
-                                <a style="color: green; padding-left: 10px; padding-right: 20px;"
+                                <a style="color: rgb(157, 94, 189); padding-left: 10px; padding-right: 20px;"
                                     href="https://www.facebook.com/SunniHanfiOrganisationMumbai/"><i
                                         class="fab fa-facebook-square fa-2x"></i></a>
-                                <a style="color: green; padding-left: 10px; padding-right: 20px;"
-                                    href="mailto: imran.shaikh16230@gmail.com" title="email"><i class="fas fa-envelope fa-2x"></i></a>
-                                <a style="color:green; padding-left: 10px;padding-right:20px;"
+                                <a style="color: rgb(157, 94, 189); padding-left: 10px; padding-right: 20px;"
+                                    href="mailto: imran.shaikh16230@gmail.com" title="email"><i
+                                        class="fas fa-envelope fa-2x"></i></a>
+                                <a style="color:rgb(157, 94, 189); padding-left: 10px;padding-right:20px;"
                                     href="https://www.youtube.com/user/786SHO/videos" title="youtube"><i
                                         class="fa fa-youtube-play fa-2x" aria-hidden="true"></i>
                                 </a>
                             </div>
-
-
-                            
-
-                            
-                    </ul>
-                    <div class="clear"></div>
-                    <span class="widget-item-control">
-                        <span class="item-control blog-admin">
-
+    
+    
+    
+    
+    
+                        </ul>
+                        <div class="clear"></div>
+                        <span class="widget-item-control">
+                            <span class="item-control blog-admin">
+    
+                            </span>
                         </span>
-                    </span>
-                    <div class="clear"></div>
+                        <div class="clear"></div>
+                    </div>
+    
+    
                 </div>
-            </div>
 
 
                 </div>
                 <div id="rollbar" class="col col-lg-2" style="margin-top: 15px; z-index: 1;">
-                    <div class="container">
+                    <div class="container" id="contains">
                         <div class="actionon">
                             <div id="spanMenu">
                                 <span style="padding-top:8px;">Menu</span>
@@ -150,67 +156,68 @@
                         </script>
         
                         <style>
-                            .actionon {
-                                /* position: fixed; */
-                                bottom: 50px;
-                                left: 50px;
-                                width: 50px;
-                                height: 50px;
-                                background: rgb(142, 218, 129);
-                                color: #006400;
-                                border-radius: 100%;
-                                cursor: pointer;
-                                font-family: cursive;
-                                box-shadow: 0 10px 5px #006400;
-                            }
-        
-                            .actionon span {
-                                position: relative;
-                                width: 100%;
-                                height: 100%;
-                                display: flex;
-                                justify-content: center;
-                                align-items: center;
-                                color: #006400;
-                                font-size: 1.2em;
-                                transition: 0.3s ease-in-out;
-                            }
-        
-                            .actionon:active span {
-                                transform: rotate(75deg);
-        
-                            }
-                            .actionoff {
-                                /* position: fixed; */
-                                bottom: 50px;
-                                left: 50px;
-                                width: 50px;
-                                height: 50px;
-                                background: rgb(142, 218, 129);
-                                color: #006400;
-                                border-radius: 100%;
-                                cursor: pointer;
-                                font-family: cursive;
-                                box-shadow: 0 10px 5px #006400;
-                            }
-        
-                            .actionoff span {
-                                position: relative;
-                                width: 100%;
-                                height: 100%;
-                                display: flex;
-                                justify-content: center;
-                                align-items: center;
-                                color: #006400;
-                                font-size: 1.2em;
-                                transition: 0.3s ease-in-out;
-                            }
-        
-                            .actionoff:active span {
-                                transform: rotate(75deg);
-        
-                            }
-                        </style>
+                    .actionon {
+                        /* position: fixed; */
+                        bottom: 50px;
+                        left: 50px;
+                        width: 50px;
+                        height: 50px;
+                        background: snow;
+                        color: #660099;
+                        border-radius: 100%;
+                        cursor: pointer;
+                        font-family: cursive;
+                        box-shadow: 0 10px 5px  rgb(225, 182, 246);
+                    }
+
+                    .actionon span {
+                        position: relative;
+                        width: 100%;
+                        height: 100%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        color: #660099;
+                        font-size: 1.2em;
+                        transition: 0.3s ease-in-out;
+                    }
+
+                    .actionon:active span {
+                        transform: rotate(75deg);
+
+                    }
+
+                    .actionoff {
+                        /* position: fixed; */
+                        bottom: 50px;
+                        left: 50px;
+                        width: 50px;
+                        height: 50px;
+                        background: snow;
+                        color: #660099;
+                        border-radius: 100%;
+                        cursor: pointer;
+                        font-family: cursive;
+                        box-shadow: 0 10px 5px  rgb(225, 182, 246);
+                    }
+
+                    .actionoff span {
+                        position: relative;
+                        width: 100%;
+                        height: 100%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        color: #660099;
+                        font-size: 1.2em;
+                        transition: 0.3s ease-in-out;
+                    }
+
+                    .actionoff:active span {
+                        transform: rotate(75deg);
+
+                    }
+                </style>
                     </div>
                 </div>
                 <div id="srch" style="margin-top: 20px;">
@@ -223,20 +230,21 @@
 
             </div>
     <div>
-        <h2 style="color: green; padding-left: 10px; padding-top: 10px;">SUNNI HANFI ORGANISATION - BOOKS CORNER</h2>
+        <h2 style="color: rgb(157, 94, 189); padding-left: 10px; padding-top: 10px;box-shadow: 4px 4px 4px rgb(225, 182, 246);">NewsInfo - Magazine Corner</h2>
         <hr style="padding: 5px;">
         {% for book in all_books %}
-        <div class="card mb-3" id="wrapper1" style="max-width: 700px;" style="background-color: rgb(193, 255, 182);">
+        <div class="card mb-3" id="wrapper1" style="max-width: 700px;" style="background-color: snow;">
             <div class="row no-gutters" >
               <div class="col-md-4">
                 <img src="/media/{{book.Image}}" class="card-img" alt="image">
               </div>
               <div class="col-md-8">
-                <div class="card-body" style="background-color: rgb(193, 255, 182);">
+                <div class="card-body" style="background-color: snow;">
                   <h5 class="card-title" style="color: #556B2F; margin-bottom: 5px;">{{book.BookTitle}}</h5>
                   <p class="card-text"><small class="text-muted"> Author : {{book.Author}}</small></p>
                   <p class="card-text">{{book.BookDescription|safe|truncatechars:300}}</p>
-                  <a href="/media/{{book.BookFile}}" class="btn btn-success">Download </a>
+                  <a href="/media/{{book.BookFile}}" class="btn btn-light" style="color: snow; background-color: rgb(157, 94, 189); font-weight: 500;">Download </a>
+                  <!-- <button type="submit" role="button" class="btn btn-light" style="color: snow; background-color: rgb(157, 94, 189); font-weight: 500;">Submit</button> -->
 
                 </div>
               </div>
@@ -402,9 +410,9 @@
 
     @media only screen and (min-width: 250px) {
         #LinkList1 {
-            border: 0.6px solid green;
+            border: 0.6px solid rgb(157, 94, 189);
             border-radius: 3px;
-            background-color: rgb(193, 255, 182);
+            background-color: snow;
         }
     }
 
@@ -423,6 +431,12 @@
         #wrapper1 {
             /* max-width: 0%; */
             padding: 5px;
+        }
+    }
+    @media only screen and (min-width: 300px) and (max-width: 420px){
+
+        #contains {
+            width: 92%;
         }
     }
 
@@ -465,10 +479,10 @@
 <style>
 .no-gutters>.col, .no-gutters>
 [class*=col-] {
-    background-color: rgb(193, 255, 182);
-    border: 0px green ; 
+    background-color: snow;
+    border: 0px rgb(157, 94, 189) ; 
     outline-style: outset; 
-    outline-color: green; 
+    outline-color: rgb(157, 94, 189); 
 }
 
 </style>

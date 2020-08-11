@@ -6,7 +6,7 @@ from django.http import request
 from tracking_analyzer.models import Tracker
 from django.contrib.auth.decorators import login_required
 
-# Create your views here.
+# Create your views here
 
 def blogHome(request):
     all_post = Post.objects.all()

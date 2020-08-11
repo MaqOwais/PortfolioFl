@@ -14,38 +14,35 @@ def topic_page(request,rewrite_topicsub):# filter(Topic__topicsub__contains=subt
                 'rewrite_topicsub':rewrite_topicsub.replace('_',' '),
          }
     return render(request,'home/sub.html' , context)
-# 
+
 def home(request):
-    all_post = Post.objects.all()
-    subtopicsLis = set()
-    for post in all_post:
-        subtop = post.rewrite_topicsub
-        p = subtopicsLis.add(subtop)
-    subtopicsLis1 = list(subtopicsLis)
+    all_pos = Topic.objects.all().order_by('priority')
+    subtopicsLis1 = []
+    for post in all_pos:
+        subtop = post.name
+        subtopicsLis1.append(subtop)
+
     context = { "subtopicsLis1": subtopicsLis1,
-                "all_post" : all_post,
-                "home_page": "active",
-                }   
+                "home_page": "active",}
     return render(request, 'home/Home.html',context)
 
 def archive(request):
     all_post = Post.objects.all()
     y = {"JAN":1 , "FEB" :2, "MAR":3, "APR":4, "MAY":5, "JUN":6, "JUL":7, "AUG":8, "SEPT":9,'OCT':10,'NOV':11,'DEC':12}
-
-    dic = {}
+    dic1 = {}
     for post in all_post:
         monthPosted = post.monthly
         yearPosted = post.yearly
-        if yearPosted in dic:
-            if monthPosted not in dic[yearPosted]:
-                dic[yearPosted].append(monthPosted)
-                if len(dic[yearPosted]) > 1:
-                    B = sorted(dic[yearPosted] , key= lambda x: y.get(x))
-                    dic[yearPosted] = B
+        if yearPosted in dic1:
+            if monthPosted not in dic1[yearPosted]:
+                dic1[yearPosted].append(monthPosted)
+                if len(dic1[yearPosted]) > 1:
+                    B = sorted(dic1[yearPosted] , key= lambda x: y.get(x))
+                    dic1[yearPosted] = B
         else:
-            dic[yearPosted] = [monthPosted]
-    print(dic)
-    
+            dic1[yearPosted] = [monthPosted]
+    dic = {key : sorted(dic1[key]) for key in sorted(dic1)}
+    dic[yearPosted] = sorted(dic[yearPosted] , key= lambda x: y.get(x))
     context = {"archive_page": "active",
                 "dic" : dic}
     return render(request,'home/archive.html',context)

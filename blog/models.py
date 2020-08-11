@@ -4,11 +4,12 @@ from django.utils.timezone import now
 
 
 class Topic(models.Model):
+    priority = models.IntegerField(default=0)
     name = models.CharField('Topic Name (use underscores and no spaces)' , blank=True, null=True, max_length=120)
     def __str__(self):
         return self.name
 
-# 
+#
 class Post(models.Model):
     MONTHLY_CHOICES = (
         ('JAN', 'JAN',),
@@ -53,7 +54,7 @@ class Post(models.Model):
         ('2039', '2039',),
         ('2040', '2040',),
     )
-    
+
     sno = models.AutoField(primary_key=True)
     title = models.CharField(max_length=255)
     author = models.CharField(max_length=100)

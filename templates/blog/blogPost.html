@@ -12,101 +12,105 @@
 <div class="row" style="height: auto !important; margin-right: 10px; margin-left: 10px; margin-top: 10px;">
     <div id="sidebar" style="height: auto !important;" itemscope="itemscope"
         itemtype="http://schema.org/WPSideBar" style="height: auto !important;">
-        <div class="slidebar ty-trigger section" id="slidebar" style="height: auto !important;">
+        <div class="slidebar ty-trigger section" id="slidebar" style="height: auto !important; box-shadow: 4px 4px 4px rgb(225, 182, 246);">
             <div class="widget LinkList" data-version="1" id="LinkList1">
                 <h2 style="color: #556B2F; padding:5px;">
-             
+
                 </h2>
                 <div class="widget-content">
                     <div id="srch1">
-                        <form method="get" style="    margin-left: 0.5rem!important;" action="/search" class="form-inline my-2 my-lg-0 mx-3">
+                        <form method="get" style="margin-left: 0.5rem!important;" action="/search" class="form-inline my-2 my-lg-0 mx-3">
                         <input class="form-control mr-sm-1" type="search" placeholder="Search Article" aria-label="Search" name="query"
                             id="query" style="width:55%">
                         <button class="btn btn-outline-success my-2 mr-sm-1" type="submit">Search</button>
                         </form>
                     </div>
-        
-                    <ul style="color: green;">
-        
-                    
+
+                    <ul style="color: rgb(157, 94, 189);">
+
+
                         <li><a href="/">
-                                <p style=" color: green;">
-                                    <p style=" color: green;">HOME</p>
+                                <p style=" color: rgb(157, 94, 189);">
+                                    <p style=" color: rgb(157, 94, 189);">HOME</p>
                                 </p>
                             </a></li>
-                            <li><a href="/blog" style="color: green;">
+                        <li><a href="/blog" style="color: rgb(157, 94, 189);">
                                 <p>
-                                    <p style=" color: green;">BLOGS</p>
+                                    <p style=" color: rgb(157, 94, 189);">BLOGS</p>
                                 </p>
                             </a></li>
-                            <li><a href="/#topic" style="color: green;">
+                        <li><a href="/#topic" style="color: rgb(157, 94, 189);">
                                 <p>
-                                    <p style=" color: green;">TOPICS</p>
+                                    <p style=" color: rgb(157, 94, 189);">TOPICS</p>
                                 </p>
                             </a></li>
-                            <li><a href="/archive" style="color: green;">
+                        <li><a href="/archive" style="color: rgb(157, 94, 189);">
                                 <p>
-                                    <p style=" color: green;">ARCHIVE</p>
+                                    <p style=" color: rgb(157, 94, 189);">ARCHIVE</p>
                                 </p>
                             </a></li>
-                            <li><a href="/about" style="color: green;">
+                        <li><a href="/about" style="color: rgb(157, 94, 189);">
                                 <p>
-                                    <p style=" color: green;">ABOUT</p>
+                                    <p style=" color: rgb(157, 94, 189);">ABOUT</p>
                                 </p>
                             </a></li>
-                            <li><a href="/contact" style="color: green;">
+                        <li><a href="/contact" style="color: rgb(157, 94, 189);">
                                 <p>
-                                    <p style=" color: green;">Contact US</p>
+                                    <p style=" color: rgb(157, 94, 189);">Contact US</p>
                                 </p>
                             </a></li>
-                            <li><a href="/books" style="color: green;">
+                        <li><a href="/books" style="color: rgb(157, 94, 189);">
                                 <p>
-                                    <p style=" color: green;">BOOKS CORNER</p>
+                                    <p style=" color: rgb(157, 94, 189);">Magazine Corner</p>
                                 </p>
                             </a></li>
-                            {% if not user.is_authenticated %}
-                            <li>
-                                <a class="dropdown-item" data-toggle="modal" data-target="#signUPModal" style="color: green; width:70%; padding: 0px; cursor: pointer;">
+                        {% if not user.is_authenticated %}
+                        <li>
+                            <a class="dropdown-item" data-toggle="modal" data-target="#signUPModal"
+                                style="color: rgb(157, 94, 189); width:70%; padding: 0px; cursor: pointer;">
                                 <p>
-                                    <p style=" color: green;">SignUP</p>
+                                    <p style=" color: rgb(157, 94, 189);">SignUP</p>
                                 </p>
                             </a>
-                            </li>
-                            {% endif %}
-                            {% if not user.is_authenticated %}
-                            <li>
-                                <a class="dropdown-item" data-toggle="modal" data-target="#loginModal" style="color: green; width:70%; padding: 0px; cursor: pointer;">
+                        </li>
+                        {% endif %}
+                        {% if not user.is_authenticated %}
+                        <li>
+                            <a class="dropdown-item" data-toggle="modal" data-target="#loginModal"
+                                style="color: rgb(157, 94, 189); width:70%; padding: 0px; cursor: pointer;">
                                 <p>
-                                    <p style=" color: green;">LogIN</p>
+                                    <p style=" color: rgb(157, 94, 189);">LogIN</p>
                                 </p>
                             </a>
-                            </li>
-                            {% endif %}
-                            {% if user.is_authenticated %}
-                            <li>
-                                <a class="dropdown-item" data-toggle="modal" data-target="#logoutModal" style="color: green; width:70%; padding: 0px; cursor: pointer;">
+                        </li>
+                        {% endif %}
+                        {% if user.is_authenticated %}
+                        <li>
+                            <a class="dropdown-item" data-toggle="modal" data-target="#logoutModal"
+                                style="color: rgb(157, 94, 189); width:70%; padding: 0px; cursor: pointer;">
                                 <p>
-                                    <p style=" color: green;">LogOUT</p>
+                                    <p style=" color: rgb(157, 94, 189);">LogOUT</p>
                                 </p>
                             </a>
-                            </li>
-                            {% endif %}
-                            <div>
-                                <a style="color: green; padding-left: 10px; padding-right: 20px;"
-                                    href="https://www.facebook.com/SunniHanfiOrganisationMumbai/"><i
-                                        class="fab fa-facebook-square fa-2x"></i></a>
-                                <a style="color: green; padding-left: 10px; padding-right: 20px;"
-                                    href="mailto: imran.shaikh16230@gmail.com" title="email"><i class="fas fa-envelope fa-2x"></i></a>
-                                <a style="color:green; padding-left: 10px;padding-right:20px;"
-                                    href="https://www.youtube.com/user/786SHO/videos" title="youtube"><i
-                                        class="fa fa-youtube-play fa-2x" aria-hidden="true"></i>
-                                </a>
-                            </div>
+                        </li>
+                        {% endif %}
+                        <div>
+                            <a style="color: rgb(157, 94, 189); padding-left: 10px; padding-right: 20px;"
+                                href="https://www.facebook.com/SunniHanfiOrganisationMumbai/"><i
+                                    class="fab fa-facebook-square fa-2x"></i></a>
+                            <a style="color: rgb(157, 94, 189); padding-left: 10px; padding-right: 20px;"
+                                href="mailto: imran.shaikh16230@gmail.com" title="email"><i
+                                    class="fas fa-envelope fa-2x"></i></a>
+                            <a style="color:rgb(157, 94, 189); padding-left: 10px;padding-right:20px;"
+                                href="https://www.youtube.com/user/786SHO/videos" title="youtube"><i
+                                    class="fa fa-youtube-play fa-2x" aria-hidden="true"></i>
+                            </a>
+                        </div>
 
 
-                            
 
-                            
+
+
                     </ul>
                     <div class="clear"></div>
                     <span class="widget-item-control">
@@ -117,6 +121,7 @@
                     <div class="clear"></div>
                 </div>
 
+
             </div>
 
         </div>
@@ -126,7 +131,7 @@
                 <div class="container">
                     {% load social_share %}
                     <div class="action" onclick="actionToggle();">
-                        <span>Share</span>
+                        <span style="color: #660099;">Share</span>
                         <ul>
                             <li><a><i class="fab fa-whatsapp"></i>{% post_to_whatsapp object_or_url "Share on WhatsApp!" %}</a>
                             </li>
@@ -155,12 +160,12 @@
                             left: 50px;
                             width: 50px;
                             height: 50px;
-                            background: rgb(142, 218, 129);
-                            color: #006400;
+                            background: snow;
+                            color: rgb(157, 94, 189);;
                             border-radius: 100%;
                             cursor: pointer;
                             font-family: cursive;
-                            box-shadow: 0 10px 5px #006400;
+                            box-shadow: 3px 10px 5px rgb(225, 182, 246);
                         }
 
                         .action span {
@@ -170,9 +175,10 @@
                             display: flex;
                             justify-content: center;
                             align-items: center;
-                            color: #006400;
+                            color: snow;
                             font-size: 1em;
                             transition: 0.3s ease-in-out;
+                            
                         }
 
                         .action:active span {
@@ -183,7 +189,7 @@
                         .action ul {
                             position: inherit;
                             /* bottom: 90px; */
-                            background: rgb(142, 218, 129);
+                            background: snow;
                             min-width: 200px;
                             border-radius: 30px;
                             opacity: 0.8;
@@ -191,11 +197,8 @@
                             padding-inline-start: 10px;
                             transition: 0.3s;
                             margin-top: 15px;
+                            box-shadow: 3px 10px 5px rgb(225, 182, 246);
                         }
-
-                        /* .action ul li {
-                            color: solid green;
-                        } */
 
                         .action.active ul {
                             bottom: 65px;
@@ -212,7 +215,7 @@
                             align-items: center;
                             padding: 10px 0;
                             transition: 0.3s;
-                            color: #006400;
+                            color: rgb(157, 94, 189);;
 
                         }
 
@@ -221,18 +224,19 @@
                         }
 
                         .action ul li:not(:last-child) {
-                            border-bottom: 1px solid green;
+                            border-bottom: 1px solid rgb(157, 94, 189);
                         }
 
                         .action ul li a {
                             margin-right: 15px;
                             opacity: 0.8;
                             transform: scale(1);
-                            color: solid green;
+                            color: solid rgb(157, 94, 189);
                         }
 
                         .action ul li a:hover {
                             opacity: 0.2;
+                            color: solid rgb(157, 94, 189);
                         }
                     </style>
                 </div>
@@ -272,67 +276,68 @@
                     </script>
 
                     <style>
-                        .actionon {
-                            /* position: fixed; */
-                            bottom: 50px;
-                            left: 50px;
-                            width: 50px;
-                            height: 50px;
-                            background: rgb(142, 218, 129);
-                            color: #006400;
-                            border-radius: 100%;
-                            cursor: pointer;
-                            font-family: cursive;
-                            box-shadow: 0 10px 5px #006400;
-                        }
+                    .actionon {
+                        /* position: fixed; */
+                        bottom: 50px;
+                        left: 50px;
+                        width: 50px;
+                        height: 50px;
+                        background: snow;
+                        color: #660099;
+                        border-radius: 100%;
+                        cursor: pointer;
+                        font-family: cursive;
+                        box-shadow: 0 10px 5px  rgb(225, 182, 246);
+                    }
 
-                        .actionon span {
-                            position: relative;
-                            width: 100%;
-                            height: 100%;
-                            display: flex;
-                            justify-content: center;
-                            align-items: center;
-                            color: #006400;
-                            font-size: 1.2em;
-                            transition: 0.3s ease-in-out;
-                        }
+                    .actionon span {
+                        position: relative;
+                        width: 100%;
+                        height: 100%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        color: #660099;
+                        font-size: 1.2em;
+                        transition: 0.3s ease-in-out;
+                    }
 
-                        .actionon:active span {
-                            transform: rotate(75deg);
+                    .actionon:active span {
+                        transform: rotate(75deg);
 
-                        }
-                        .actionoff {
-                            /* position: fixed; */
-                            bottom: 50px;
-                            left: 50px;
-                            width: 50px;
-                            height: 50px;
-                            background: rgb(142, 218, 129);
-                            color: #006400;
-                            border-radius: 100%;
-                            cursor: pointer;
-                            font-family: cursive;
-                            box-shadow: 0 10px 5px #006400;
-                        }
+                    }
 
-                        .actionoff span {
-                            position: relative;
-                            width: 100%;
-                            height: 100%;
-                            display: flex;
-                            justify-content: center;
-                            align-items: center;
-                            color: #006400;
-                            font-size: 1.2em;
-                            transition: 0.3s ease-in-out;
-                        }
+                    .actionoff {
+                        /* position: fixed; */
+                        bottom: 50px;
+                        left: 50px;
+                        width: 50px;
+                        height: 50px;
+                        background: snow;
+                        color: #660099;
+                        border-radius: 100%;
+                        cursor: pointer;
+                        font-family: cursive;
+                        box-shadow: 0 10px 5px  rgb(225, 182, 246);
+                    }
 
-                        .actionoff:active span {
-                            transform: rotate(75deg);
+                    .actionoff span {
+                        position: relative;
+                        width: 100%;
+                        height: 100%;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        color: #660099;
+                        font-size: 1.2em;
+                        transition: 0.3s ease-in-out;
+                    }
 
-                        }
-                    </style>
+                    .actionoff:active span {
+                        transform: rotate(75deg);
+
+                    }
+                </style>
                 </div>
             </div>
             
@@ -351,9 +356,9 @@
     </div>
     <!-- content heading  -->
     <div style=" height: auto !important; " id="wrapper">
-        <h2 class="blog-post-title" id="main-ow">{{post.title}}</h2>
+        <h2 class="blog-post-title" id="main-ow"><span style="box-shadow: 3px 3px 3px rgb(225, 182, 246);">{{post.title}}</span></h2>
         <p class="blog-post-meta"><span style="color: #808080;">{{post.timeStamp}}</span> <a
-                href="/about">{{post.author}}</a> <span style="color: #556B2F;"> Views: {{post.views}} </span>
+                href="/about">{{post.author}}</a>
         </p>
 
         <!-- actual content  -->
@@ -364,7 +369,7 @@
 
         <!-- comments section  -->
         <div class="container" id='comment'>
-            <h2 style="color: green;padding-top:20px">COMMENTS ({{comments.count}}):</h2>
+            <h2 style="color: rgb(157, 94, 189);padding-top:20px"><span style="box-shadow: 4px 4px 4px rgb(225, 182, 246);">COMMENTS ({{comments.count}}):</span></h2>
             {% if user.is_authenticated %}
             <form action="/blog/postComment" method="post">
                 {% csrf_token %}
@@ -376,7 +381,8 @@
 
                 </div>
                 <input type="hidden" name="postSno" value="{{post.sno}}">
-                <button type="submit" class="btn btn-sm btn-success">Submit</button>
+                <button type="submit" role="button" class="btn btn-outline-success" >Submit</button>
+
             </form>
             {% else %}
             <p style="font-style: italic; color: red;">Please login to post a comment!
@@ -384,20 +390,20 @@
             {% endif %}
 
             {% for comment in comments %}
-            <div class="row my-3 mx-0 ">
-                <div class="col-md-0" style="color:green; padding-left: 10px; padding-top: 10px;">
+            <div class="row my-3 mx-0 " id="comment111">
+                <div class="col-md-0" style="color:rgb(157, 94, 189); padding-left: 10px; padding-top: 10px; ">
                     <i class="fa fa-user-circle fa-3x" aria-hidden="true"></i>
                 </div>
                 <div class="col-md-11 mx-0" style="margin-bottom: 8px;">
                     <b
-                        style="color: green; padding-right: 6px; font-weight: 900; font-style: italic; font-size: 25px; ">{{comment.user.username}}</b>
+                        style="color: rgb(157, 94, 189);box-shadow: 1px 1px 1px rgb(225, 182, 246); padding-right: 6px; font-weight: 900; font-style: italic; font-size: 25px; ">{{comment.user.username}}</b>
                     <span class="badge badge-secondary"
-                        style="font-size: 14px; padding: 4px; color:white; background-color: green;">{{comment.timestamp| naturaltime}}</span>
+                        style="font-size: 14px; box-shadow: 2px 2px 2px rgb(225, 182, 246); padding: 4px; color:snow; background-color: rgb(157, 94, 189);">{{comment.timestamp| naturaltime}}</span>
                     <div style="padding-top:2px; padding-bottom:6px">{{comment.comment}}</div>
                     <div class="reply mx-0">
                         {% if user.is_authenticated %}
                         <p>
-                            <button class="btn btn-sm btn-success" type="button" data-toggle="collapse"
+                            <button class="btn btn-sm btn-outline-success" type="button" data-toggle="collapse"
                                 data-target="#replyBox{{comment.sno}}" aria-expanded="false"
                                 aria-controls="replyBox{{comment.sno}}">
                                 Reply
@@ -407,14 +413,14 @@
 
 
                         <div class="collapse" id="replyBox{{comment.sno}}">
-                            <div class="card card-body my-2">
+                            <div class="card card-body my-2" style="box-shadow: 4px 4px 4px rgb(225, 182, 246);">
                                 <form action="/blog/postComment" method="post">
                                     {% csrf_token %}
                                     <input type="hidden" name="postSno" value="{{post.sno}}">
                                     <div class="form-group">
-                                        <label for="comment">Post a Reply :</label>
+                                        <label for="comment" style="color :rgb(157, 94, 189)" >Post a Reply :</label>
                                         <input type="text" class="form-control" name="comment"
-                                            placeholder="enter comment here">
+                                            placeholder="enter comment here" style="box-shadow: 3px 3px 3px rgb(225, 182, 246);">
                                         <input type="hidden" name="parentSno" value="{{comment.sno}}">
                                     </div>
                                     <input type="hidden" name="postSno" value="{{post.sno}}">
@@ -434,15 +440,15 @@
                         {% endif %}
                         <div class="replies mx-2 mt-3">
                             {% for reply in replyDict|get_val:comment.sno %}
-                            <div class="row">
-                                <div class="col-md-0 my-2" style="color: green; padding-left: 4px;">
+                            <div class="row" style="box-shadow: 4px 4px 4px rgb(225, 182, 246);">
+                                <div class="col-md-0 my-2" style="color: rgb(157, 94, 189); padding-left: 4px;">
                                     <i class="fa fa-user-circle fa-2x" aria-hidden="true"></i>
                                 </div>
                                 <div class="col-md-11" style="padding-top: 3px;">
                                     <b
-                                        style="color: green; padding-right: 5px;font-weight: 900; font-style: italic; font-size:20px;">{{reply.user.username}}</b>
+                                        style="color: rgb(157, 94, 189); box-shadow: 1px 1px 1px rgb(225, 182, 246); padding-right: 5px;font-weight: 900; font-style: italic; font-size:20px;">{{reply.user.username}}</b>
                                     <span class="badge badge-secondary"
-                                        style="font-size: 13px; padding: 3px; color:white; background-color: green;">{{reply.timestamp| naturaltime}}</span>
+                                        style="font-size: 13px; padding: 3px; color:snow; box-shadow: 2px 2px 2px rgb(225, 182, 246); background-color: rgb(157, 94, 189);">{{reply.timestamp| naturaltime}}</span>
                                     <div style="padding-top: 3px; padding-bottom: 3px; color:#808080;">
                                         {{reply.comment}}</div>
                                 </div>
@@ -597,10 +603,10 @@
     
         @media only screen and (min-width: 250px) {
             #LinkList1 {
-                border: 0.6px solid green;
-                border-radius: 3px;
-                background-color: rgb(193, 255, 182);
-            }
+            border: 0.6px solid rgb(157, 94, 189);
+            border-radius: 3px;
+            background-color: snow;
+        }
         }
     
         @media only screen and (min-width: 1005px) {
@@ -661,35 +667,43 @@
 
 <style>
     .row {
-        border: 0.5px solid green;
+        border: 0.5px solid rgb(157, 94, 189);
         border-radius: 6px;
         padding: 3px;
         margin-bottom: 10px;
     }
     @media only screen and (min-width: 700px) {
             #actual {
-                border: 0.5px solid green;
+                border: 0.5px solid rgb(157, 94, 189);
                 padding: 5px;
                 border-radius: 3px;
                 padding: 20px;
+                
                 
                 
             }
         }
         @media only screen and (min-width: 600px) {
             #actual {
-                border: 0.5px solid green;
+                border: 0.5px solid rgb(157, 94, 189);
                 padding: 5px;
                 border-radius: 3px;
+                box-shadow: 4px 4px 4px rgb(225, 182, 246);
                 
                 
             }
         }
-        @media only screen and (min-width: 319px) {
+        @media only screen and (min-width: 300px) {
             #comment {
                 margin: 0px;
                 padding:0px;
                 
+            }
+        }
+        @media only screen and (min-width: 400px) {
+            #comment111 {
+            box-shadow: 4px 4px 4px rgb(225, 182, 246)
+
             }
         }
         @media only screen and (min-width: 319px) {
