@@ -67,7 +67,7 @@ MIDDLEWARE = [
 
 ]
 TEMPLATE_PATH = os.path.join(BASE_DIR, 'templates')
-ROOT_URLCONF = 'PortfolioFL.urls'
+ROOT_URLCONF = 'PortfolioFl.urls'
 
 TEMPLATES = [
     {
