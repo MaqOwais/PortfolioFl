@@ -117,14 +117,21 @@ def handleSignup(request):
             messages.error(request, "Username must contain only letters and numbers")
             return redirect('home')
 
+        if (not User.objects.filter(username = usernae).exists()) and (not User.objects.filter(email = email).exists()):
+            myuser = User.objects.create_user(usernae, email, pass1 )
+            myuser.save()
+            messages.success(request,'Your account is successfully created, Login to continue')
+            return redirect('home')
+        elif User.objects.filter(username= usernae).exists():
+            messages.error(request, "You are already a User, Login to Continue!")
+            return redirect('home')
+        elif User.objects.filter(email = email).exists():
+            messages.error(request, "Please use another Email id!")
+            return redirect('home')
 
-
-        myuser = User.objects.create_user(usernae, email, pass1 )
-        myuser.save()
-        messages.success(request,f'Your account is successfully created {request.user}')
-        return redirect('home')
     else:
         return HttpResponse('404 - Not Found')
+
 
 
 def handleLogin(request):
