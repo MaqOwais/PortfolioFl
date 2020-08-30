@@ -4,523 +4,76 @@
 
 {% block body %}
 
-
-<div class="row" style="height: auto !important; margin-right: 10px; margin-left: 10px; margin-top: 10px;">
-    <div id="sidebar1" style="height: auto !important;" itemscope="itemscope" itemtype="http://schema.org/WPSideBar"
-        style="height: auto !important;">
-
-        <div class="slidebar ty-trigger section" id="slidebar" style="height: auto !important; box-shadow: 4px 4px 4px rgb(225, 182, 246);">
-
-            <div class="widget LinkList" data-version="1" id="LinkList1">
-                <h2 style="color: #556B2F; padding:5px;">
-
-                </h2>
-                <div class="widget-content">
-                    <div id="srch1">
-                        <form method="get" style="margin-left: 0.5rem!important;" action="/search" class="form-inline my-2 my-lg-0 mx-3">
-                        <input class="form-control mr-sm-1" type="search" placeholder="Search Article" aria-label="Search" name="query"
-                            id="query" style="width:55%">
-                        <button class="btn btn-outline-success my-2 mr-sm-1" type="submit">Search</button>
-                        </form>
-                    </div>
-
-                    <ul style="color: rgb(157, 94, 189);">
-
-
-                        <li><a href="/">
-                                <p style=" color: rgb(157, 94, 189);">
-                                    <p style=" color: rgb(157, 94, 189);">HOME</p>
-                                </p>
-                            </a></li>
-                        <li><a href="/blog" style="color: rgb(157, 94, 189);">
-                                <p>
-                                    <p style=" color: rgb(157, 94, 189);">BLOGS</p>
-                                </p>
-                            </a></li>
-                        <li><a href="#topic" style="color: rgb(157, 94, 189);">
-                                <p>
-                                    <p style=" color: rgb(157, 94, 189);">TOPICS</p>
-                                </p>
-                            </a></li>
-                        <li><a href="/archive" style="color: rgb(157, 94, 189);">
-                                <p>
-                                    <p style=" color: rgb(157, 94, 189);">ARCHIVE</p>
-                                </p>
-                            </a></li>
-                        <li><a href="/about" style="color: rgb(157, 94, 189);">
-                                <p>
-                                    <p style=" color: rgb(157, 94, 189);">ABOUT</p>
-                                </p>
-                            </a></li>
-                        <li><a href="/contact" style="color: rgb(157, 94, 189);">
-                                <p>
-                                    <p style=" color: rgb(157, 94, 189);">Contact US</p>
-                                </p>
-                            </a></li>
-                        <li><a href="/books" style="color: rgb(157, 94, 189);">
-                                <p>
-                                    <p style=" color: rgb(157, 94, 189);">Magazine Corner</p>
-                                </p>
-                            </a></li>
-                        {% if not user.is_authenticated %}
-                        <li>
-                            <a class="dropdown-item" data-toggle="modal" data-target="#signUPModal"
-                                style="color: rgb(157, 94, 189); width:70%; padding: 0px; cursor: pointer;">
-                                <p>
-                                    <p style=" color: rgb(157, 94, 189);">SignUP</p>
-                                </p>
-                            </a>
-                        </li>
-                        {% endif %}
-                        {% if not user.is_authenticated %}
-                        <li>
-                            <a class="dropdown-item" data-toggle="modal" data-target="#loginModal"
-                                style="color: rgb(157, 94, 189); width:70%; padding: 0px; cursor: pointer;">
-                                <p>
-                                    <p style=" color: rgb(157, 94, 189);">LogIN</p>
-                                </p>
-                            </a>
-                        </li>
-                        {% endif %}
-                        {% if user.is_authenticated %}
-                        <li>
-                            <a class="dropdown-item" data-toggle="modal" data-target="#logoutModal"
-                                style="color: rgb(157, 94, 189); width:70%; padding: 0px; cursor: pointer;">
-                                <p>
-                                    <p style=" color: rgb(157, 94, 189);">LogOUT</p>
-                                </p>
-                            </a>
-                        </li>
-                        {% endif %}
-                        <div>
-                            <a style="color: rgb(157, 94, 189); padding-left: 10px; padding-right: 20px;"
-                                href="https://www.facebook.com/SunniHanfiOrganisationMumbai/"><i
-                                    class="fab fa-facebook-square fa-2x"></i></a>
-                            <a style="color: rgb(157, 94, 189); padding-left: 10px; padding-right: 20px;"
-                                href="mailto: imran.shaikh16230@gmail.com" title="email"><i
-                                    class="fas fa-envelope fa-2x"></i></a>
-                            <a style="color:rgb(157, 94, 189); padding-left: 10px;padding-right:20px;"
-                                href="https://www.youtube.com/user/786SHO/videos" title="youtube"><i
-                                    class="fa fa-youtube-play fa-2x" aria-hidden="true"></i>
-                            </a>
-                        </div>
-
-
-
-
-
-                    </ul>
-                    <div class="clear"></div>
-                    <span class="widget-item-control">
-                        <span class="item-control blog-admin">
-
-                        </span>
-                    </span>
-                    <div class="clear"></div>
-                </div>
-
-
-            </div>
-
-        </div>
-        <div id="rollbar" class="col col-lg-2" style="margin-top: 15px; z-index: 1; width: 90%;">
-            <div class="container">
-                <div class="actionon">
-                    <div id="spanMenu">
-                        <span style="padding-top:8px;">Menu</span>
-                    </div>
-                </div> 
-                <div class="actionoff">
-                    <div id="spanMenuoff">
-                        <span style="padding-top:8px;">Menu</span>
-                    </div>
-                </div>
-                <script type="text/javascript">
-                    $('.actionoff').hide();
-                    $(document).ready(function () {
-                        $("#spanMenu").click(function () {
-                            $('#slidebar').show();
-                            $('.actionon').hide();
-                            $('.actionoff').show();
-
-
-                        });
-                    });
-                    $(document).ready(function () {
-                        $("#spanMenuoff").click(function () {
-                            $('#slidebar').hide();
-                            $('.actionon').show();
-                            $('.actionoff').hide();
-
-                        });
-                    });
-
-                </script>
-
-                <style>
-                    .actionon {
-                        /* position: fixed; */
-                        bottom: 50px;
-                        left: 50px;
-                        width: 50px;
-                        height: 50px;
-                        background: snow;
-                        color: #660099;
-                        border-radius: 100%;
-                        cursor: pointer;
-                        font-family: cursive;
-                        box-shadow: 0 10px 5px  rgb(225, 182, 246);
-                    }
-
-                    .actionon span {
-                        position: relative;
-                        width: 100%;
-                        height: 100%;
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        color: #660099;
-                        font-size: 1.2em;
-                        transition: 0.3s ease-in-out;
-                    }
-
-                    .actionon:active span {
-                        transform: rotate(75deg);
-
-                    }
-
-                    .actionoff {
-                        /* position: fixed; */
-                        bottom: 50px;
-                        left: 50px;
-                        width: 50px;
-                        height: 50px;
-                        background: snow;
-                        color: #660099;
-                        border-radius: 100%;
-                        cursor: pointer;
-                        font-family: cursive;
-                        box-shadow: 0 10px 5px  rgb(225, 182, 246);
-                    }
-
-                    .actionoff span {
-                        position: relative;
-                        width: 100%;
-                        height: 100%;
-                        display: flex;
-                        justify-content: center;
-                        align-items: center;
-                        color: #660099;
-                        font-size: 1.2em;
-                        transition: 0.3s ease-in-out;
-                    }
-
-                    .actionoff:active span {
-                        transform: rotate(75deg);
-
-                    }
-                </style>
-            </div>
-        </div>
-        <div id="srch" style="margin-top: 20px;">
-            <form method="get" style="margin-left: 0.5rem!important;" action="/search" class="form-inline my-2 my-lg-0 mx-3">
-            <input class="form-control mr-sm-1" type="search" placeholder="Search Article" aria-label="Search" name="query"
-                id="query" style="width:62%">
-            <button class="btn btn-outline-success my-2 mr-sm-1" style="margin-left: 3px;" type="submit">Search</button>
-            </form>
-        </div>
-
-    </div>
-    <div class="container my-3 mx-10" id="wrapper1">
+    <div class="container my-3 mx-10" id="wrapper3">
 
         <div class="jumbotron text-white"
-            style=" margin-top: 10px; border:0px rgb(157, 94, 189) ; outline-style: outset; outline-color: rgb(157, 94, 189) ; background-color: snow ; box-shadow: 8px 8px 8px rgb(225, 182, 246); " >
+            style=" margin-top: 10px; border:0px rgb(157, 94, 189) ; outline-style: outset; outline-color: rgb(157, 94, 189) ; background-color: snow ; box-shadow: 8px 8px 8px rgb(225, 182, 246); ">
             <div style=" color: black;">
             </div style="color: green;">
-        <div>
-            <h1 style="color: rgb(111, 100, 117); word-break : break-all" id="ab"><span style="box-shadow: 4px 4px 4px rgb(225, 182, 246); border-radius: 4px;">Welcome to NewsInfo</span></h1>
-            <h1 style="color: rgb(111, 100, 117) ; word-break : break-all" id="ab1"><span style="box-shadow: 4px 4px 4px rgb(225, 182, 246);border-radius: 4px;">Welcome to</span> </h1>
-            <h1 style="color: rgb(111, 100, 117) ; word-break : break-all" id="ab2"><span style="box-shadow: 4px 4px 4px rgb(225, 182, 246);border-radius: 4px;">NewsInfo</span></h1>
-            <h1 style="color: rgb(157, 94, 189) ; font-style: italic;font-size: 40px;"><span style="box-shadow: 4px 4px 4px rgb(225, 182, 246); border-radius: 4px;">{% if user.is_authenticated %}
-                {{request.user}} {% endif %}</span></h1>
-        </div>
-          
-
-        <p class="lead"></p>
-        <hr class="my-4">
-        <p style="color:rgb(157, 94, 189) ;">THE MISSION OF NewsInfo IS TO ENCOUNTER WRONG NEWS OF THROUGH
-            REFERENCES IN ENGLISH !
-        
-MISSION, VISION
-VISION
-PTV shall be the leading news and public information channel in the country.
-MISSION
-We shall inform, inspire, and empower our people and nation through relevant, trustworthy, and world-class quality television programs and services.
-CORE VALUES
-Professionalism, Integrity, Commitment, and Dedication Teamwork, Innovation, and Service, Excellence Value for God, Country and People</p>
-        
-        <a class="btn btn-lg" style="color: snow; background-color: rgb(157, 94, 189); box-shadow: 6px 6px 6px rgb(225, 182, 246);" href="/blog" role="button">News Articles !</a>
-    </div>
-    <!-- <button type="button" class="btn btn-outline-warning">Warning</button> -->
-
-    <div class="container" id="wrapper2">
-        <a name="topic"></a>
-        <h2 style="color: rgb(157, 94, 189); "><span style="box-shadow: 4px 4px 4px rgb(225, 182, 246);">TOPICS :</span></h2>
-
-        {% for post in subtopicsLis1%}
-        {% if post %}
-        <hr>
-        <div class="row no-gutters border rounded overflow-hidden flex-md-row my-4 h-md-250 position-relative"
-            style=" box-shadow: 10px 10px 10px rgb(225, 182, 246); border:0px snow ; outline-style: outset; outline-color: rgb(157, 94, 189); background-color: snow; color: snow; ">
-            <div class="col p-4 d-flex flex-column position-static">
-                <h4><strong class="d-inline-block mb-2" style="color:rgb(157, 94, 189);">{{post|underscore}}</strong>
-                </h4>
-                <!-- <h3 class="mb-0">{{post|underscore}}</h3> -->
-                <!-- <div class="mb-1 text-muted">Nov 12</div>  -->
-                <!-- <p class="card-text mb-auto">this is a wider card </p>  -->
-                <a href="/topic_page/{{post}}/" style="color:#556B2F;" class="stretched-link">Go to Topic!</a>
-                <!-- <a class="btn btn-success btn-lg" href="/topic_page/{{post}}/" role="button">Go to Topic!</a> -->
+            <div>
+                <h1 style="color: rgb(111, 100, 117); word-break : break-all" id="ab"><span
+                        style="box-shadow: 4px 4px 4px rgb(225, 182, 246); border-radius: 4px;">Welcome to NewsInfo</span>
+                </h1>
+                <h1 style="color: rgb(111, 100, 117) ; word-break : break-all" id="ab1"><span
+                        style="box-shadow: 4px 4px 4px rgb(225, 182, 246);border-radius: 4px;">Welcome to</span> </h1>
+                <h1 style="color: rgb(111, 100, 117) ; word-break : break-all" id="ab2"><span
+                        style="box-shadow: 4px 4px 4px rgb(225, 182, 246);border-radius: 4px;">NewsInfo</span></h1>
+                <h1 style="color: rgb(157, 94, 189) ; font-style: italic;font-size: 40px;"><span
+                        style="box-shadow: 4px 4px 4px rgb(225, 182, 246); border-radius: 4px;">{% if user.is_authenticated %}
+                        {{request.user}} {% endif %}</span></h1>
             </div>
-            <div class="col-auto d-none d-lg-block">
 
-            </div>
+
+            <p class="lead"></p>
+            <hr class="my-4">
+            <p style="color:rgb(157, 94, 189) ;">THE MISSION OF NewsInfo IS TO ENCOUNTER WRONG NEWS OF THROUGH
+                REFERENCES IN ENGLISH !
+
+                MISSION, VISION
+                VISION
+                PTV shall be the leading news and public information channel in the country.
+                MISSION
+                We shall inform, inspire, and empower our people and nation through relevant, trustworthy, and world-class
+                quality television programs and services.
+                CORE VALUES
+                Professionalism, Integrity, Commitment, and Dedication Teamwork, Innovation, and Service, Excellence Value
+                for God, Country and People</p>
+
+            <a class="btn btn-lg"
+                style="color: snow; background-color: rgb(157, 94, 189); box-shadow: 6px 6px 6px rgb(225, 182, 246);"
+                href="/blog" role="button">News Articles !</a>
         </div>
-        {% endif %}
-        {% endfor %}
+        <!-- <button type="button" class="btn btn-outline-warning">Warning</button> -->
+
+        <div class="container" id="wrapper2">
+            <a name="topic"></a>
+            <h2 style="color: rgb(157, 94, 189); "><span style="box-shadow: 4px 4px 4px rgb(225, 182, 246);">TOPICS :</span>
+            </h2>
+
+            {% for post in subtopicsLis1%}
+            {% if post %}
+            <hr>
+            <div class="row no-gutters border rounded overflow-hidden flex-md-row my-4 h-md-250 position-relative"
+                style=" box-shadow: 10px 10px 10px rgb(225, 182, 246); border:0px snow ; outline-style: outset; outline-color: rgb(157, 94, 189); background-color: snow; color: snow; ">
+                <div class="col p-4 d-flex flex-column position-static">
+                    <h4><strong class="d-inline-block mb-2" style="color:rgb(157, 94, 189);">{{post|underscore}}</strong>
+                    </h4>
+                    <!-- <h3 class="mb-0">{{post|underscore}}</h3> -->
+                    <!-- <div class="mb-1 text-muted">Nov 12</div>  -->
+                    <!-- <p class="card-text mb-auto">this is a wider card </p>  -->
+                    <a href="/topic_page/{{post}}/" style="color:#556B2F;" class="stretched-link">Go to Topic!</a>
+                    <!-- <a class="btn btn-success btn-lg" href="/topic_page/{{post}}/" role="button">Go to Topic!</a> -->
+                </div>
+                <div class="col-auto d-none d-lg-block">
+
+                </div>
+            </div>
+            {% endif %}
+            {% endfor %}
+        </div>
+
     </div>
 
-</div>
-
-</div>
-
-
-
-
-
-
-
-
-
-</div>
-
-<style>
-    @media only screen and (min-width: 1000px) {
-
-        #wrapper1,
-        #wrapper2,
-        #sidebar1 {
-            float: none;
-            clear: both;
-            margin: 0;
-        }
-    }
-
-    @media only screen and (min-width: 1100px) {
-        #sidebar1 {
-            padding-top: 20px;
-            width: 30%;
-            float: right;
-            margin-bottom: 130px;
-            margin-right: 20px;
-        }
-    }
-
-
-    @media only screen and (min-width: 600px) and (max-width: 1090px) {
-
-        #wrapper1,
-        #wrapper2 {
-            max-width: 1090px;
-        }
-    }
-
-
-    @media only screen and (min-width: 1200px) and (max-width: 1299px) {
-
-        #wrapper1,
-        #wrapper2 {
-            max-width: 850px;
-        }
-    }
-
-    @media only screen and (min-width: 1200px) and (max-width: 1299px) {
-        #sidebar1 {
-            max-width: 270px;
-
-        }
-    }
-
-    @media only screen and (min-width: 1300px) and (max-width: 1399px) {
-
-        #wrapper1,
-        #wrapper2 {
-            max-width: 950px;
-        }
-    }
-
-    @media only screen and (min-width: 1300px) and (max-width: 1399px) {
-        #sidebar1 {
-            max-width: 300px;
-
-        }
-    }
-
-    @media only screen and (min-width: 1400px) and (max-width: 1477px) {
-
-        #wrapper1,
-        #wrapper2 {
-            max-width: 980px;
-        }
-    }
-
-    @media only screen and (min-width: 1400px) and (max-width: 1477px) {
-        #sidebar1 {
-            max-width: 320px;
-
-        }
-    }
-
-    @media only screen and (min-width: 1480px) {
-
-        #wrapper1,
-        #wrapper2 {
-            max-width: 1050px;
-        }
-    }
-
-    @media only screen and (min-width: 1480px) {
-        #sidebar1 {
-            max-width: 330px;
-
-        }
-    }
-
-    @media only screen and (min-width: 1005px) {
-
-        #wrapper1,
-        #wrapper2 {
-            /* max-width: 0%; */
-            padding: 0px;
-            width: 70%;
-            float: left;
-        }
-    }
-
-    @media only screen and (min-width: 300px) and (max-width: 1023px) {
-        #sidebar1 {
-            /* padding-top: 5px; */
-            padding: 10px;
-        }
-    }
-
-    @media only screen and (min-width: 1100px) {
-        #sidebar1 {
-            padding-top: 25px;
-            padding-right: 3px;
-            padding-left: 15px;
-            width: 30%;
-            float: right;
-            /* padding: 10px; */
-        }
-    }
-
-    @media only screen and (min-width: 1100px) and (max-width: 1199px) {
-
-        #wrapper1,
-        #wrapper2 {
-            max-width: 800px;
-        }
-    }
-
-    @media only screen and (min-width: 1100px) and (max-width: 1199px) {
-        #sidebar1 {
-            max-width: 270px;
-
-        }
-    }
-    @media only screen and (min-width: 400px) and (max-width: 1090px) {
-        #sidebar1 {
-            max-width: 330px;
-
-        }
-    }
-
-    @media only screen and (min-width: 250px) {
-        #LinkList1 {
-            border: 1px solid rgb(157, 94, 189);
-            border-radius: 3px;
-            background-color: snow;
-        }
-    }
-
-    @media only screen and (min-width: 1005px) {
-
-        #wrapper1,
-        #wrapper2 {
-            /* max-width: 0%; */
-            padding: 0px;
-            width: 70%;
-            float: left;
-        }
-    }
-
-    @media only screen and (min-width: 300px) {
-
-        #wrapper1,
-        #wrapper2 {
-            /* max-width: 0%; */
-            padding: 5px;
-        }
-    }
-
-    @media only screen and (min-width: 319px) and (max-width: 700px) {
-
-        #wrapper1,
-        #wrapper2 {
-            width: 98%;
-
-        }
-    }
-
-    /* padding-right: 10px; padding-left: 50px; padding-top:25px */
-    @media only screen and (min-width: 300px) {
-        #wrapper1 {
-            width: 98%;
-        }
-    }
-
-    @media only screen and (min-width: 300px) {
-        #wrapper2 {
-            width: 100%;
-
-        }
-    }
-
-    @media only screen and (min-width: 300px) and (max-width: 1000px) {
-        #sidebar1 {
-            padding-top: 0px;
-            /* width: 0%; */
-        }
-    }
-
-
-    #wrapper1,
-    #wrapper2 {
-        float: left;
-        /* max-width: 1000px; */
-    }
-
-    *,
-    ::after,
-    ::before {
-        box-sizing: content-box;
-    }
-</style>
-
-
-
-</div>
-
+    </div>
 
 {% endblock body %}
-
